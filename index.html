@@ -222,9 +222,9 @@
                     state.page = 3;
                     enemies.clearEnemyList();
                     gun.clearAmmoList();
-                    tampon = 10;
+                    tampon = 15;
                     score = 0;
-                    tampon = 10;
+                    tampon = 15;
                 } 
 
                 //going backwards
@@ -923,7 +923,7 @@
                             && enemyList[i].xEnemy > player.xPlayer
                             && enemyList[i].yEnemy <= player.yPlayer
                             && enemyList[i].confiscated == false) {
-                            tampon = tampon - 2;
+                            tampon = tampon - 1;
                             enemyList[i].confiscated = true;
                         }
                     }
@@ -977,7 +977,7 @@
                             && player.yPlayer <= tamponList[i].yTamp + 80){
                             tamponList.splice(i,1);
                             play(tamponSound);
-                            tampon = tampon + 5;
+                            tampon = tampon + 10;
                         }
                     }  
                 }
